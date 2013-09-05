@@ -43,10 +43,11 @@ module.exports = (grunt) ->
             debug: false
             }
           }
+        files: {
+          './src/index.html': ['./jade/*.jade']
         }
-      files: {
-        './src/index.html': './jade/*.jade'
       }
+    }
 
   }
 
