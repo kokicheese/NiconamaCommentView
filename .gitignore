@@ -1,6 +1,6 @@
 node_modules/
 *.log
-src/**/*.html
-src/**/*.js
-src/**/*.css
+src/*.html
+src/*.js
+src/*.css
 !src/jquery-*.js
