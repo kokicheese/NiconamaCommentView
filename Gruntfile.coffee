@@ -22,6 +22,13 @@ module.exports = (grunt) ->
           ]
         tasks: ['jade']
       }
+
+      stylus: {
+        files: [
+          './stylus/*.styl'
+        ]
+        tasks: ['stylus']
+      }
       
       options: { nospawn: true }
     }
@@ -48,6 +55,14 @@ module.exports = (grunt) ->
         }
       }
     }
+
+    stylus: {
+      compile: {
+        files: {
+          './src/all.css': ['./stylus/*.styl']
+          }
+        }
+      }
 
   }
 
