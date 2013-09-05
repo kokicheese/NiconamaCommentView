@@ -1,0 +1,22 @@
+{
+
+	"app": {
+		"background": {
+				"scripts": ["background.js"]
+		}
+	},
+
+  "permissions": [
+		"*://*.nicovideo.jp/*"
+  ],
+
+  "manifest_version": 2,
+
+  "icons": { "48": "icons/48_48.png",
+             "128": "icons/128_128.png" },
+
+  "name": "NiconamaCommentView",
+  "description": ".",
+  "version": "1.0"
+
+}

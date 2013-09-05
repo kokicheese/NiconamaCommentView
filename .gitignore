@@ -1,0 +1,5 @@
+node_modules/
+*.log
+src/*.html
+src/*.js
+!src/jquery-*.js

@@ -1,0 +1,16 @@
+{
+  "name": "NiconamaCommentView",
+  "version": "0.0.0",
+  "private": true,
+  "description": "ニコ生のコメントビューアです。デバイスごとのコテハンを統一することが目的です",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-stylus": "~0.8.0",
+    "grunt-contrib-jade": "~0.8.0"
+  },
+  "repository": "",
+  "author": "@koki_cheese",
+  "license": "BSD"
+}
