@@ -66,6 +66,13 @@ module.exports = (grunt) ->
 
   }
 
+
+  grunt.task.registerTask 'build', [
+    'coffee'
+    'jade'
+    'stylus'
+    ]
+    
   grunt.registerTask 'default', 'watch'
   
   return
