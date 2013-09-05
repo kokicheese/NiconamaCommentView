@@ -8,16 +8,45 @@ module.exports = (grunt) ->
 
   grunt.initConfig {
     watch: {
-      tasks: 'coffee'
+      coffee: {
+        files: [
+          'coffee/*.coffee'
+          'coffee/all/*.coffee'
+          ]
+        tasks: ['coffee']
+        }
+
+      jade: {
+        files: [
+          './jade/*.jade'
+          ]
+        tasks: ['jade']
+      }
+      
+      options: { nospawn: true }
     }
 
     coffee: {
       compile: {
+        options: { join: true }
         files: {
-          './src/background.js': ['./coffee/background.coffee']
+          './src/background.js': './coffee/background.coffee'
+          './src/all.js': './coffee/all/*.coffee'
         }
       }
     }
+
+    jade: {
+      compile: {
+        options: {
+          data: {
+            debug: false
+            }
+          }
+        }
+      files: {
+        './src/index.html': './jade/*.jade'
+      }
 
   }
 
