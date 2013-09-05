@@ -8,7 +8,8 @@
     "grunt-contrib-uglify": "~0.2.4",
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-stylus": "~0.8.0",
-    "grunt-contrib-jade": "~0.8.0"
+    "grunt-contrib-jade": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3"
   },
   "repository": "",
   "author": "@koki_cheese",
