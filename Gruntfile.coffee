@@ -6,8 +6,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
+  
   grunt.initConfig {
     watch: {
+
       coffee: {
         files: [
           'coffee/*.coffee'
@@ -19,12 +21,14 @@ module.exports = (grunt) ->
       jade: {
         files: [
           './jade/*.jade'
+          '!*.#*'
           ]
         tasks: ['jade']
       }
 
       stylus: {
         files: [
+          './stylus/!.#*.styl'
           './stylus/*.styl'
         ]
         tasks: ['stylus']
@@ -38,7 +42,10 @@ module.exports = (grunt) ->
         options: { join: true }
         files: {
           './src/background.js': './coffee/background.coffee'
-          './src/all.js': './coffee/all/*.coffee'
+          './src/all.js': [
+            './coffee/all/*.coffee'
+            './coffee/all/!.#*'
+          ]
         }
       }
     }
@@ -51,7 +58,7 @@ module.exports = (grunt) ->
             }
           }
         files: {
-          './src/index.html': ['./jade/*.jade']
+          './src/index.html': ['./jade/*.jade', '!.#*']
         }
       }
     }
@@ -59,7 +66,7 @@ module.exports = (grunt) ->
     stylus: {
       compile: {
         files: {
-          './src/all.css': ['./stylus/*.styl']
+          './src/all.css': ['./stylus/*.styl', '!.#*']
           }
         }
       }
